@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linear", "Linear", "{5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NonLinear", "NonLinear", "{4A9E9879-1126-419C-8C5F-0F6FE8778716}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearLibrary", "Linear\LinearLibrary\LinearLibrary.csproj", "{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearExperimentation", "Linear\LinearDemos\LinearExperimentation.csproj", "{439C171B-8507-4F16-975E-7A55BF31C2E7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearLibrary", "NonLinear\NonLinearLibrary\NonLinearLibrary.csproj", "{F76B7BA3-186C-4B8E-89E3-057270DE986A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearExperimentation", "NonLinear\NonLinearDemos\NonLinearExperimentation.csproj", "{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{439C171B-8507-4F16-975E-7A55BF31C2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439C171B-8507-4F16-975E-7A55BF31C2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439C171B-8507-4F16-975E-7A55BF31C2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439C171B-8507-4F16-975E-7A55BF31C2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F76B7BA3-186C-4B8E-89E3-057270DE986A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F76B7BA3-186C-4B8E-89E3-057270DE986A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F76B7BA3-186C-4B8E-89E3-057270DE986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F76B7BA3-186C-4B8E-89E3-057270DE986A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF} = {5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}
+		{439C171B-8507-4F16-975E-7A55BF31C2E7} = {5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}
+		{F76B7BA3-186C-4B8E-89E3-057270DE986A} = {4A9E9879-1126-419C-8C5F-0F6FE8778716}
+		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD} = {4A9E9879-1126-419C-8C5F-0F6FE8778716}
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA} = {F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DC6B06C-27D8-4E83-A86B-ABF2A401B4B8}
+	EndGlobalSection
+EndGlobal
