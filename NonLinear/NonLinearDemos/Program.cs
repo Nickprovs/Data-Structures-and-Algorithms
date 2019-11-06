@@ -9,7 +9,7 @@ namespace NonLinearExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new TrieDemo();
+            var toRun = new WeightedGraphDemo();
             toRun.Run();
         }
     }
