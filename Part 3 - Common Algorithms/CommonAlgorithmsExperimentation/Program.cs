@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommonAlgorithmsExperimentation.Sorting;
+using System;
 
 namespace CommonAlgorithmsExperimentation
 {
@@ -6,7 +7,8 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var toRun = new BubbleSortDemo();
+            toRun.Run();
         }
     }
 }
