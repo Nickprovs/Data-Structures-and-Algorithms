@@ -69,6 +69,18 @@ namespace NonLinearLibrary
                     return 0;
             }
         }
+        private class EdgeComparer : IComparer<Edge>
+        {
+            public int Compare(Edge x, Edge y)
+            {
+                if (x.Weight > y.Weight)
+                    return -1;
+                if (x.Weight < y.Weight)
+                    return 1;
+                else
+                    return 0;
+            }
+        }
 
         private Dictionary<string, Node> _nodes;
 
@@ -169,6 +181,87 @@ namespace NonLinearLibrary
                 path.Add(stack.Pop().Label);
 
             return path;
+        }
+
+        public bool HasCycle()
+        {
+            var visited = new List<Node>();
+
+            foreach (var node in this._nodes.Values)
+            {
+                if (!visited.Contains(node) && this.HasCycle(node, null, visited))
+                    return true;     
+            }
+
+            return false;
+        }
+        private bool HasCycle(Node currentNode, Node parentNode, List<Node> visited)
+        {
+            visited.Add(currentNode);
+
+            foreach (var edge in currentNode.GetEdges())
+            {
+                var neighbor = edge.To;
+                if (neighbor == parentNode)
+                    continue;
+
+                if (visited.Contains(neighbor) || this.HasCycle(neighbor, currentNode, visited))
+                    return true;
+            }
+
+            return false;
+        }
+        public WeightedGraph GetMinimumSpanningTree()
+        {
+            var tree = new WeightedGraph();
+
+            if (this._nodes.Count == 0)
+                return tree;
+
+            //We use a sorted set since C# doesn't have priority queue.
+            //Max will be the edge w/ the minimum weight due to our custom edge comparer.
+            var edges = new SortedSet<Edge>(new EdgeComparer());
+
+            if (edges.Count == 0)
+                return tree;
+
+            //A way to get first item in the hash-table...
+            //...w /o converting whole thing to array
+            var enumerator = this._nodes.Values.GetEnumerator();
+            enumerator.MoveNext();
+            var startNode = enumerator.Current;
+
+            foreach (var edge in startNode.GetEdges())
+                edges.Add(edge);
+
+            tree.AddNode(startNode.Label);
+
+            while(tree._nodes.Count < this._nodes.Count)
+            {
+                var minEdge = edges.Max;
+                edges.Remove(edges.Max);
+
+                var nextNode = minEdge.To;
+
+                if (tree.ContainsNode(nextNode.Label))
+                    continue;
+
+                tree.AddNode(nextNode.Label);
+                tree.AddEdge(minEdge.From.Label, nextNode.Label, minEdge.Weight);
+
+                foreach(var edge in nextNode.GetEdges())
+                {
+                    if (!tree.ContainsNode(edge.To.Label))
+                        edges.Add(edge);
+                }
+            }
+
+            return tree;
+        }
+
+        public bool ContainsNode(string label)
+        {
+            return this._nodes.ContainsKey(label);
         }
     }
 }
