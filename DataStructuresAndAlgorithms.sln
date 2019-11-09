@@ -3,21 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29201.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Linear", "Linear", "{5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Library", "Common Library", "{F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NonLinear", "NonLinear", "{4A9E9879-1126-419C-8C5F-0F6FE8778716}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part 1 - Linear Data Structures", "Part 1 - Linear Data Structures", "{5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearLibrary", "Linear\LinearLibrary\LinearLibrary.csproj", "{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part 2 - Non-Linear Data Structures", "Part 2 - Non-Linear Data Structures", "{4A9E9879-1126-419C-8C5F-0F6FE8778716}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearExperimentation", "Linear\LinearDemos\LinearExperimentation.csproj", "{439C171B-8507-4F16-975E-7A55BF31C2E7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Part 3 - Common Algorithms", "Part 3 - Common Algorithms", "{915C3896-0116-45A7-AE3E-E210DB5003BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearLibrary", "NonLinear\NonLinearLibrary\NonLinearLibrary.csproj", "{F76B7BA3-186C-4B8E-89E3-057270DE986A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "Common Library\CommonLibrary.csproj", "{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearExperimentation", "NonLinear\NonLinearDemos\NonLinearExperimentation.csproj", "{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearLibrary", "Part 1 - Linear Data Structures\LinearLibrary\LinearLibrary.csproj", "{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinearExperimentation", "Part 1 - Linear Data Structures\LinearExperimentation\LinearExperimentation.csproj", "{439C171B-8507-4F16-975E-7A55BF31C2E7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearLibrary", "Part 2 - Non-Linear Data Structures\NonLinearLibrary\NonLinearLibrary.csproj", "{F76B7BA3-186C-4B8E-89E3-057270DE986A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NonLinearExperimentation", "Part 2 - Non-Linear Data Structures\NonLinearExperimentation\NonLinearExperimentation.csproj", "{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonAlgorithmsLibrary", "Part 3 - Common Algorithms\CommonAlgorithmsLibrary\CommonAlgorithmsLibrary.csproj", "{6F84465F-DEF9-4800-8D8E-37879AF1FED0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonAlgorithmsExperimentation", "Part 3 - Common Algorithms\CommonAlgorithmsExperimentation\CommonAlgorithmsExperimentation.csproj", "{4036409A-C607-4A8B-AD5A-01A6F01C97C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +31,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -41,20 +51,26 @@ Global
 		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F84465F-DEF9-4800-8D8E-37879AF1FED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F84465F-DEF9-4800-8D8E-37879AF1FED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F84465F-DEF9-4800-8D8E-37879AF1FED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F84465F-DEF9-4800-8D8E-37879AF1FED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4036409A-C607-4A8B-AD5A-01A6F01C97C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4036409A-C607-4A8B-AD5A-01A6F01C97C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4036409A-C607-4A8B-AD5A-01A6F01C97C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4036409A-C607-4A8B-AD5A-01A6F01C97C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA} = {F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}
 		{A74C5C99-93D4-4FD7-B5BE-D4D56D4F3EBF} = {5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}
 		{439C171B-8507-4F16-975E-7A55BF31C2E7} = {5EB8505D-4A4E-4272-8D1D-E3FAB25B5A5F}
 		{F76B7BA3-186C-4B8E-89E3-057270DE986A} = {4A9E9879-1126-419C-8C5F-0F6FE8778716}
 		{0BB3B87A-211B-4B56-8D2A-DC9496CF54BD} = {4A9E9879-1126-419C-8C5F-0F6FE8778716}
-		{F6B9F5BE-D2CA-4211-9C51-2B47672480CA} = {F33905AF-9BFD-4EEA-96C1-DC43AC88D7C2}
+		{6F84465F-DEF9-4800-8D8E-37879AF1FED0} = {915C3896-0116-45A7-AE3E-E210DB5003BD}
+		{4036409A-C607-4A8B-AD5A-01A6F01C97C4} = {915C3896-0116-45A7-AE3E-E210DB5003BD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9DC6B06C-27D8-4E83-A86B-ABF2A401B4B8}

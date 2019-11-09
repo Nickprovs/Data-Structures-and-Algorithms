@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\CommonLibrary\CommonLibrary.csproj" />
+    <ProjectReference Include="..\..\Common Library\CommonLibrary.csproj" />
     <ProjectReference Include="..\NonLinearLibrary\NonLinearLibrary.csproj" />
   </ItemGroup>
 
