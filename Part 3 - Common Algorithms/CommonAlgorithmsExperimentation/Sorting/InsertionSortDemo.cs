@@ -1,18 +1,19 @@
 ﻿using CommonLibrary;
 using System;
+using System.Collections.Generic;
+using System.Text;
 using CommonAlgorithmsLibrary.Sorting;
-
 
 namespace CommonAlgorithmsExperimentation.Sorting
 {
-    public class BubbleSortDemo : IRunnable
+    public class InsertionSortDemo : IRunnable
     {
         public void Run()
         {
-            Console.WriteLine("Bubble Sort Demo");
+            Console.WriteLine("Insertion Sort Demo");
             int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
             Console.WriteLine($"Unsorted: {string.Join(",", numbers)}");
-            numbers.BubbleSort();
+            numbers.InsertionSort();
             Console.WriteLine($"Sorted: {string.Join(",", numbers)}");
         }
     }

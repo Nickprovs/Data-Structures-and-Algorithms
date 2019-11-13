@@ -4,9 +4,9 @@ using System.Text;
 
 namespace CommonAlgorithmsLibrary.Sorting
 {
-    public static class BubbleSort
+    public static class BubbleSortExtension
     {
-        public static void Sort(this IList<int> list)
+        public static void BubbleSort(this IList<int> list)
         {
             bool isSorted;
             for(int i = 0; i < list.Count; i++)
