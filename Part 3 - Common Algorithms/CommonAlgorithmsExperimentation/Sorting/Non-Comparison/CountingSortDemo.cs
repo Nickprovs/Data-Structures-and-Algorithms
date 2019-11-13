@@ -1,19 +1,17 @@
 ﻿using CommonLibrary;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using CommonAlgorithmsLibrary.Sorting;
+using CommonAlgorithmsLibrary.Sorting.NonComparison;
 
-namespace CommonAlgorithmsExperimentation.Sorting
+namespace CommonAlgorithmsExperimentation.Sorting.NonComparison
 {
-    public class InsertionSortDemo : IRunnable
+    public class CountingSortDemo : IRunnable
     {
         public void Run()
         {
-            Console.WriteLine("Insertion Sort Demo");
+            Console.WriteLine("Counting Sort Demo");
             int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
             Console.WriteLine($"Unsorted: {string.Join(",", numbers)}");
-            numbers.InsertionSort();
+            numbers.CountingSort(7);
             Console.WriteLine($"Sorted: {string.Join(",", numbers)}");
         }
     }

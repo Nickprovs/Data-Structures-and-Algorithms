@@ -2,18 +2,18 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using CommonAlgorithmsLibrary.Sorting;
+using CommonAlgorithmsLibrary.Sorting.Comparison;
 
-namespace CommonAlgorithmsExperimentation.Sorting
+namespace CommonAlgorithmsExperimentation.Sorting.Comparison
 {
-    public class MergeSortDemo : IRunnable
+    public class QuickSortDemo : IRunnable
     {
         public void Run()
         {
-            Console.WriteLine("Merge Sort Demo");
+            Console.WriteLine("Quick Sort Demo");
             int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
             Console.WriteLine($"Unsorted: {string.Join(",", numbers)}");
-            numbers.MergeSort();
+            numbers.QuickSort();
             Console.WriteLine($"Sorted: {string.Join(",", numbers)}");
         }
     }

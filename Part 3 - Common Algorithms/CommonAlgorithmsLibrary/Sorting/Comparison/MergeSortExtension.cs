@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CommonAlgorithmsLibrary.Sorting
+namespace CommonAlgorithmsLibrary.Sorting.Comparison
 {
     public static class MergeSortExtension
     {
