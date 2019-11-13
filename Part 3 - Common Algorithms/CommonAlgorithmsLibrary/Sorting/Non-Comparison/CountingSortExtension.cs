@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CommonAlgorithmsLibrary.Sorting.NonComparison
+namespace CommonAlgorithmsLibrary.Sorting.Non_Comparison
 {
     public static class CountingSortExtension
     {

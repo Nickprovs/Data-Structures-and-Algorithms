@@ -1,5 +1,5 @@
 ﻿using CommonAlgorithmsExperimentation.Sorting.Comparison;
-using CommonAlgorithmsExperimentation.Sorting.NonComparison;
+using CommonAlgorithmsExperimentation.Sorting.Non_Comparison;
 using System;
 
 namespace CommonAlgorithmsExperimentation
@@ -8,7 +8,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new CountingSortDemo();
+            var toRun = new BucketSortDemo();
             toRun.Run();
         }
     }
