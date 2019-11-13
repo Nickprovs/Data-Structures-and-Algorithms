@@ -7,7 +7,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new MergeSortDemo();
+            var toRun = new QuickSortDemo();
             toRun.Run();
         }
     }
