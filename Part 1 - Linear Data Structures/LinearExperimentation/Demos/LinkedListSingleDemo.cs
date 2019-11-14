@@ -12,17 +12,13 @@ namespace LinearExperimentation.Demos
         public void Run()
         {
             LinkedListSingle myList = new LinkedListSingle();
-            myList.AddLast(10);
-            myList.AddLast(20);
-            myList.AddLast(30);
-            myList.AddLast(40);
-            myList.AddLast(50);
-            myList.AddLast(60);
+            myList.AddLast(33);
+            myList.AddLast(4);
+            myList.AddLast(377);
+            myList.AddLast(2);
+            myList.AddLast(1);
 
-            //Console.WriteLine($"Index of 10: {myList.IndexOf(10)}");
-            //Console.WriteLine($"Index of 20: {myList.IndexOf(20)}");
-            //Console.WriteLine($"Index of 30: {myList.IndexOf(30)}");
-            //Console.WriteLine($"Index of 4: {myList.IndexOf(4)}");
+            //Console.WriteLine($"Index of 9: {myList.IndexOf(9)}");
 
             //Console.WriteLine($"Size: {myList.Size()}");
             //Console.WriteLine("Removing Last");
@@ -39,6 +35,8 @@ namespace LinearExperimentation.Demos
             var myListWithLoop = LinkedListSingle.CreateWithLoop();
             Console.WriteLine($"Detecting if created list has loop: {myListWithLoop.HasLoop()}");
 
+            Console.WriteLine("Sorting Linked List...");
+            myList.Sort();     
         }
     }
 }

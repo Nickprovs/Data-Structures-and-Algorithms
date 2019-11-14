@@ -17,7 +17,7 @@ namespace LinearExperimentation
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            var toRun = new TwoSum();
+            var toRun = new LinkedListSingleDemo();
             toRun.Run();
         }
     }

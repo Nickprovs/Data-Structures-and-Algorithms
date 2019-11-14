@@ -59,44 +59,49 @@ namespace LinearLibrary.LinkedListSingle
         /// Removes the first element in the list
         /// </summary>
         /// <param name="item"></param>
-        public void RemoveFirst(int item)
+        public int RemoveFirst()
         {
             if(this.IsEmpty())
                 throw new InvalidOperationException("The list is empty");
+
+            var firstSaved = this._first.Value;
 
             if(this._first == this._last)
             {
                 this._first = this._last = null;
                 this._size--;
-                return;
+                return firstSaved;
             }
 
             var second = this._first.Next;
             this._first = null;
             this._first = second;
-
             this._size--;
+            return firstSaved;
         }
 
         /// <summary>
         /// Returns the last element in the list
         /// </summary>
-        public void RemoveLast()
+        public int RemoveLast()
         {
             if (this.IsEmpty())
                 throw new InvalidOperationException("The list is empty");
+
+            var lastSaved = this._last.Value;
 
             if (this._first == this._last)
             {
                 this._first = this._last = null;
                 this._size--;
-                return;
+                return lastSaved;
             }
 
             var secondToLast = this.GetPreviousNode(this._last);
             this._last = secondToLast;
             this._last.Next = null;
             this._size--;
+            return lastSaved;
         }
 
         /// <summary>
@@ -279,16 +284,100 @@ namespace LinearLibrary.LinkedListSingle
             return false;
         }
 
+        /// <summary>
+        /// Merge sort
+        /// </summary>
+        private void MergeSort()
+        {
+            this._first = this.MergeSort(this._first);
+            this._last = this.GetLastNode(this._first);
+        }
+
+        //The main function
+        private NodeSingle MergeSort(NodeSingle head)
+        {
+            if (head == null || head.Next == null)
+                return head;
+
+            //Get the middle of the list
+            var middle = this.GetMiddleNode(head);
+
+            //Split the list into two halfs
+            var leftHead = head;
+            var rightHead = middle.Next;
+            middle.Next = null;             
+
+            return this.Merge(this.MergeSort(leftHead), this.MergeSort(rightHead));
+        }
+
+        //Merge subroutine to merge two sorted lists
+        private NodeSingle Merge(NodeSingle a, NodeSingle b)
+        {
+            NodeSingle dummyHead = new NodeSingle(-1);
+
+            NodeSingle current;
+            for (current = dummyHead; a != null && b != null; current = current.Next)
+            {
+                if (a.Value <= b.Value)
+                {
+                    current.Next = a;
+                    a = a.Next;
+                }
+                else
+                {
+                    current.Next = b;
+                    b = b.Next;
+                }
+
+            }
+            current.Next = (a == null) ? b : a;
+            return dummyHead.Next;
+        }
+
+        //Finding the middle element of the list for splitting
+        private NodeSingle GetMiddleNode(NodeSingle head)
+        {
+            if (head == null)
+                return head;
+
+            NodeSingle slow = head, fast = head;
+
+            while (fast.Next != null && fast.Next.Next != null)
+            {
+                slow = slow.Next;
+                fast = fast.Next.Next;
+            }
+            return slow;
+        }
+
+        private NodeSingle GetLastNode(NodeSingle head)
+        {
+            if (head == null)
+                throw new InvalidOperationException("No last available in an empty list");
+
+            var current = head;
+            while (current.Next != null)
+                current = current.Next;
+
+            return current;
+        }
+
+
 
         #endregion
 
         #region Public Methods
 
+        public void Sort()
+        {
+            this.MergeSort();
+        }
+
         /// <summary>
         /// Determines if the list is empty
         /// </summary>
         /// <returns></returns>
-        private bool IsEmpty()
+        public bool IsEmpty()
         {
             return this._first == null;
         }

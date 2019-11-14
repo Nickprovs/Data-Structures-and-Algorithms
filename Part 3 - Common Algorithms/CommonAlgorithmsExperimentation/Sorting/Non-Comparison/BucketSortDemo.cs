@@ -11,9 +11,9 @@ namespace CommonAlgorithmsExperimentation.Sorting.Non_Comparison
         public void Run()
         {
             Console.WriteLine("Counting Sort Demo");
-            int[] numbers = { 7, 3, 1, 4, 6, 2, 3 };
+            int[] numbers = { 7, 1, 3, 5, 3};
             Console.WriteLine($"Unsorted: {string.Join(",", numbers)}");
-            numbers.BucketSort();
+            numbers.BucketSort(3);
             Console.WriteLine($"Sorted: {string.Join(",", numbers)}");
         }
     }
