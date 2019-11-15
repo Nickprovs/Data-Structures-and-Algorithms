@@ -1,4 +1,5 @@
-﻿using CommonAlgorithmsExperimentation.Sorting.Comparison;
+﻿using CommonAlgorithmsExperimentation.Searching;
+using CommonAlgorithmsExperimentation.Sorting.Comparison;
 using CommonAlgorithmsExperimentation.Sorting.Non_Comparison;
 using System;
 
@@ -8,7 +9,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new BucketSortDemo();
+            var toRun = new TernarySearchDemo();
             toRun.Run();
         }
     }
