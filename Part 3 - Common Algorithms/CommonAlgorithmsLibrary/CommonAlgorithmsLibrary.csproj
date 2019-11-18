@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="StringManipulation\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Part 1 - Linear Data Structures\LinearLibrary\LinearLibrary.csproj" />
   </ItemGroup>
 

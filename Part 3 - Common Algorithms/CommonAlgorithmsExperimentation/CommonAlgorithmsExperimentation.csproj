@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="StringManipulation\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\Common Library\CommonLibrary.csproj" />
     <ProjectReference Include="..\CommonAlgorithmsLibrary\CommonAlgorithmsLibrary.csproj" />
   </ItemGroup>

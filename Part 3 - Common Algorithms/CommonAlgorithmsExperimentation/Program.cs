@@ -1,6 +1,7 @@
 ﻿using CommonAlgorithmsExperimentation.Searching;
 using CommonAlgorithmsExperimentation.Sorting.Comparison;
 using CommonAlgorithmsExperimentation.Sorting.Non_Comparison;
+using CommonAlgorithmsExperimentation.StringManipulation;
 using System;
 
 namespace CommonAlgorithmsExperimentation
@@ -9,7 +10,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new ExponentialSearchDemo();
+            var toRun = new RotationDemo();
             toRun.Run();
         }
     }
