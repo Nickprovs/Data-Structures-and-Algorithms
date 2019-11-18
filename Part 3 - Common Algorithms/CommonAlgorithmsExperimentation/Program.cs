@@ -9,7 +9,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new JumpSearchDemo();
+            var toRun = new ExponentialSearchDemo();
             toRun.Run();
         }
     }

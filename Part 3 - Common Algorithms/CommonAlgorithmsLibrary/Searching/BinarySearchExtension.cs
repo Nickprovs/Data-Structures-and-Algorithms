@@ -11,7 +11,7 @@ namespace CommonAlgorithmsLibrary.Searching
             return BinarySearchRecursive(inputList, target, 0, inputList.Count - 1); ;
         }
 
-        private static int BinarySearchRecursive(IList<int> list, int target, int left, int right)
+        public static int BinarySearchRecursive(IList<int> list, int target, int left, int right)
         {
             if (right < left)
                 return -1;
