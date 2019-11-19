@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace CommonAlgorithmsLibrary.StringManipulation
 {
@@ -121,6 +122,139 @@ namespace CommonAlgorithmsLibrary.StringManipulation
             }
 
             return result;
+        }
+
+        public static string CapitalizeFirstLetterOfEachWord(this string input)
+        {
+            if (input == null)
+                throw new ArgumentException();
+
+            return CapitalizeFirstLetterOfEachWordRegex(input);
+        }
+
+        private static string CapitalizeFirstLetterOfEachWordRegex(string input)
+        {
+            var endsTrimmed = input.Trim();
+            if (string.IsNullOrWhiteSpace(endsTrimmed))
+                return "";
+
+            var noDuplicateSpaces = Regex.Replace(endsTrimmed, "  +", " ");
+            var split = noDuplicateSpaces.Split(' ');
+
+            for (int i = 0; i < split.Length; i++)           
+                split[i] = split[i].First().ToString().ToUpper() + split[i].Substring(1);
+            
+            return string.Join(" ", split);
+        }
+
+        private static string CapitalizeFirstLetterOfEachWordStandard(string input)
+        {
+            var trimmedInput = input.Trim();
+            var split = trimmedInput.Split();
+
+            var outputBuilder = new StringBuilder();
+
+            for (int i = 0; i < split.Length; i++)
+            {
+                var word = split[i];
+
+                if (string.IsNullOrWhiteSpace(word))
+                    continue;
+
+                var capitalized = word.First().ToString().ToUpper() + word.Substring(1);
+                outputBuilder.Append(capitalized);
+
+                if (i < split.Length - 1)
+                    outputBuilder.Append(" ");
+            }
+
+            return outputBuilder.ToString();
+        }
+
+        public static bool IsAnagram(this string input, string possibleRotation)
+        {
+            if (input == null || possibleRotation == null)
+                return false;
+
+            //return IsAnagramUsingSorting(input, possibleRotation);
+            return IsAnagramUsingHistogrammingHashTable(input, possibleRotation);
+        }
+
+        //O(n)
+        private static bool IsAnagramUsingHistogrammingHashTable(string input1, string input2)
+        {
+            var inputHashTable = new Dictionary<char, int>();
+
+            //O(n)
+            foreach (var character in input1)
+            {
+                if (inputHashTable.ContainsKey(character))
+                    inputHashTable[character]++;
+                else
+                    inputHashTable.Add(character, 0);
+            }
+
+            //O(n)
+            foreach (var character in input2)
+            {
+                if (inputHashTable.ContainsKey(character))
+                    inputHashTable[character]--;
+                else
+                    return false;
+            }
+            //O(n)
+            foreach(var key in inputHashTable.Keys)
+            {
+                if (inputHashTable[key] > 0)
+                    return false;
+            }
+
+            return true;
+        }
+
+        //O(nlogn)
+        private static bool IsAnagramUsingSorting(string input1, string input2)
+        {
+            if (input1.Length != input2.Length)
+                return false;
+            //O(n) + O(nlogn)
+            var ordered1 = input1.ToLowerInvariant().OrderBy(c => c).ToArray();
+            //O(n) + O(nlogn)
+            var ordered2 = input2.ToLowerInvariant().OrderBy(c => c).ToArray();
+
+            return Enumerable.SequenceEqual(ordered1, ordered2);
+        }
+
+        public static bool IsPalindrome(this string input)
+        {
+            if (input == null)
+                return false;
+
+            if (string.IsNullOrWhiteSpace(input))
+                return true;
+
+            return IsPalindromeBetter(input);
+            //return IsPalindromeStandard(input);
+        }
+
+        private static bool IsPalindromeStandard(string input)
+        {
+            var reversed = input.Reverse();
+            return input.Equals(reversed);
+        }
+
+        private static bool IsPalindromeBetter(string input)
+        {
+            int left = 0;
+            int right = input.Length - 1;
+
+            while(left < right)
+            {
+                if (input[left++] != input[right--])
+                    return false;
+            }
+
+            return true;
         }
     }
 }
