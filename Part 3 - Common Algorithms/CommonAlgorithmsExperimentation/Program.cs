@@ -10,7 +10,7 @@ namespace CommonAlgorithmsExperimentation
     {
         static void Main(string[] args)
         {
-            var toRun = new RotationDemo();
+            var toRun = new MostRepeatedCharacterDemo();
             toRun.Run();
         }
     }
